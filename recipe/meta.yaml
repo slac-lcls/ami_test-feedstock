@@ -1,0 +1,66 @@
+{% set name = "ami" %}
+{% set version = "2.2.9" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/slac-lcls/{{ name }}/archive/{{ version }}.tar.gz
+  sha256: 1f521fb18dc0d79121053b6953e1a8006947e4b97ffd1982fbbe2459191b1584
+
+build:
+  skip: True  # [win or osx]
+  noarch: python
+  number: 0
+  script:
+    - "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - setuptools
+    - python
+    - pip
+    - pytest-runner
+  run:
+    - python
+    - dill
+    - pyzmq
+    - pyqtgraph
+    - networkfox
+    - psana
+    - ipython
+    - pint
+    - qtpy
+    - asyncqt
+    - amityping
+    - mypy
+    - numba
+    - h5py
+    - pyarrow=0.16.0
+    - scipy
+    - pytest-qt
+    - pytest-asyncio
+    - sympy
+    - pygraphviz
+    - setproctitle
+    - pyfftw
+    - pyqode.python
+
+about:
+  home: https://github.com/slac-lcls/ami
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.md
+  summary: 'The LCLS-II online graphical analysis monitoring package'
+  description: |
+    ami is the online graphical anaylis package
+    developed for LCLS-II.
+  doc_url: https://github.com/slac-lcls/ami
+  dev_url: https://github.com/slac-lcls/ami
+
+extra:
+  recipe-maintainers:
+    - valmar
+    - chrisvam
+
