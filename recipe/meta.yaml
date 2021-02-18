@@ -12,7 +12,7 @@ source:
 build:
   skip: True  # [win or osx]
   noarch: python
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
@@ -37,7 +37,7 @@ requirements:
     - mypy
     - numba
     - h5py
-    - pyarrow=0.16.0
+    - pyarrow
     - scipy
     - pytest-qt
     - pytest-asyncio
