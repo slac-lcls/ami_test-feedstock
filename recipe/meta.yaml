@@ -1,5 +1,5 @@
 {% set name = "ami" %}
-{% set version = "2.3.3" %}
+{% set version = "2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/slac-lcls/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 9b67ea8f86a593c9376ca64ea835c768fabd8c2e3fb86a4d0ebed69936346f12 
+  sha256: be8494a7303bd12f1d6249764966e43a77fd732dbf3c9ee2f5b1d2f482ed63b4 
 
 build:
   skip: True  # [win or osx]
   noarch: python
-  number: 2
+  number: 0
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
