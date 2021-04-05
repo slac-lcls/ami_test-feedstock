@@ -46,6 +46,7 @@ requirements:
     - setproctitle
     - pyfftw
     - pyqode.python
+    - qtconsole
 
 about:
   home: https://github.com/slac-lcls/ami
