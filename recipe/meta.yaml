@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/slac-lcls/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/slac-lcls/lcls2/archive/refs/tags/{{ version }}.tar.gz
   sha256: 48d9b71dab312a99a6f3372ae323146c585e4c4f219a4ec116a52e09a602c76e
 
 build:
