@@ -12,7 +12,7 @@ source:
 build:
   skip: True  # [win or osx]
   noarch: python
-  number: 1
+  number: 2
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
@@ -48,7 +48,6 @@ requirements:
     - pyqode.python
     - qtconsole
     - prometheus_client
-    - jmespath
 
 about:
   home: https://github.com/slac-lcls/ami
