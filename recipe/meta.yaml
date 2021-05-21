@@ -1,5 +1,5 @@
 {% set name = "ami" %}
-{% set version = "2.4.2" %}
+{% set version = "2.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/slac-lcls/ami/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 59893cdd5d1ffd874a9838431bef68688ded14d722a5339871b94377f052b756
+  sha256: a2ac1be42c6bd70fb6349815960293385316a91910b4af59a8415b2d11f94a43 
 
 build:
   skip: True  # [win or osx]
