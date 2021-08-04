@@ -10,9 +10,9 @@ source:
   sha256: f2698a99915cab9e3ab7da654adbb92cb7470fb70c9012a59877031f8b31249e 
 
 build:
-  skip: True  # [win or osx]
+  skip: True  # [win]
   noarch: python
-  number: 0
+  number: 1
   script:
     - "{{ PYTHON }} -m pip install . -vv"
 
